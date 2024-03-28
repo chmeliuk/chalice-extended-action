@@ -7,7 +7,12 @@ fi
 
 if [ ! -z "$REQUIREMENTS_FILE" ]
 then
-      pip install -r "$REQUIREMENTS_FILE" -t ./vendor
+      vendor_part=""
+      if [! -z "$INSTALL_VENDOR" ]
+      then
+          vendor_part=" -t ./vendor"
+      fi
+      pip install -r "$REQUIREMENTS_FILE" $vendor_part
 fi
 
 if ! [ -z "$PROJECT_DIR" ]
