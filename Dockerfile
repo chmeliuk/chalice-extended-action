@@ -1,4 +1,4 @@
-FROM python:3.11-slim
+FROM python:3.11-alpine
 
 LABEL version="1.0.0"
 LABEL repository="https://github.com/5tigerjelly/chalice-action"
